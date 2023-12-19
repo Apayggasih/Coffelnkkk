@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.uaspm2.coffelnkk.fragment.MainFragment"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_beansFragment"
+            app:destination="@id/beansFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_manualBrewFragment"
+            app:destination="@id/manualBrewFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_recipeFragment"
+            app:destination="@id/recipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/beansFragment"
+        android:name="com.uaspm2.coffelnkk.fragment.BeansFragment"
+        android:label="fragment_beans"
+        tools:layout="@layout/fragment_beans" >
+        <action
+            android:id="@+id/action_beansFragment_to_deskripsiFragment"
+            app:destination="@id/deskripsiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/manualBrewFragment"
+        android:name="com.uaspm2.coffelnkk.fragment.ManualBrewFragment"
+        android:label="fragment_manual_brew"
+        tools:layout="@layout/fragment_manual_brew" >
+        <action
+            android:id="@+id/action_manualBrewFragment_to_deskripsiFragment"
+            app:destination="@id/deskripsiFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeFragment"
+        android:name="com.uaspm2.coffelnkk.fragment.RecipeFragment"
+        android:label="fragment_recipe"
+        tools:layout="@layout/fragment_recipe" >
+        <action
+            android:id="@+id/action_recipeFragment_to_deskripsiFragment"
+            app:destination="@id/deskripsiFragment" />
+        <action
+            android:id="@+id/action_recipeFragment_to_recipeVerticalFragment"
+            app:destination="@id/recipeVerticalFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deskripsiFragment"
+        android:name="com.uaspm2.coffelnkk.fragment.DeskripsiFragment"
+        android:label="fragment_deskripsi"
+        tools:layout="@layout/fragment_deskripsi" >
+        <argument
+            android:name="deskripsiInfo"
+            app:argType="com.uaspm2.coffelnkk.adapters.DeskripsiInfo" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeVerticalFragment"
+        android:name="com.uaspm2.coffelnkk.fragment.RecipeVerticalFragment"
+        android:label="fragment_recipe_vertical"
+        tools:layout="@layout/fragment_recipe_vertical" />
+</navigation>
